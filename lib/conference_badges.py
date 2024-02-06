@@ -1,8 +1,10 @@
+# NAMES = ["Guido", "Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
+
 def badge_maker(name):
-    return "Hello, my name is " + name + "."
+    return f"Hello, my name is {name}."
 
 def batch_badge_creator(names):
-    return [ "Hello, my name is " + name + "." for name in names ]
+    return [ f"Hello, my name is {name}." for name in names ]
 
 
 def assign_rooms(names):
@@ -14,4 +16,13 @@ def assign_rooms(names):
     return list
 
 def printer(names):
-    return None
+    for badges in batch_badge_creator(names):
+        print(badges)
+    for assigned in assign_rooms(names):
+        print(assigned)
+    
+
+
+
+
+    
